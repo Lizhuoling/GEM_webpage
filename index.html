@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=0.2">
+  <meta charset="utf-8">
+  <meta name="description" content="VIRT">
+  <meta name="keywords" content="Embodied AI, Robotic Manipulation">
+  <title>GEM</title>
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/GEM_logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .is-size-5.publication-authors .affiliations-block {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+  </style>
+
+  <style>
+    .is-abstract {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+
+  <style>
+    .is-controllable {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<style>
+  video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h1 class="title is-1 publication-title" style="font-size: 40px;">
+          Train Once, Deploy Anywhere:<br> 
+          Realizing Data-Efficient Dynamic Object Manipulation
+        </h1>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">
+            <a href="https://lizhuoling.github.io/">Zhuoling Li</a><sup>1</sup></a>&nbsp</a>&nbsp  
+          </span>
+          <span class="author-block">
+            <a href="https://xywu.me/">Xiaoyang Wu</a><sup>1</sup></a>&nbsp</a>&nbsp    
+          </span>
+          <span class="author-block">
+            <a href="https://tonyxuqaq.github.io/">Zhenhua Xu</a><sup>2</sup></a>&nbsp</a>&nbsp    
+          </span>
+          <span class="author-block">
+            <a href="https://hszhao.github.io/">Hengshuang Zhao</a><sup>1</sup></a>&nbsp</a>&nbsp    
+          </span>
+        </div>
+
+        <div class="is-size-5 publication-authors">
+          <span class="affiliations-block"><sup>1</sup>HKU</span>
+          <span class="affiliations-block"><sup>2</sup>THU</span>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <span class="link-block">
+              <a href=   "xxx" 
+                  class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://github.com/Lizhuoling/GEM.git"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span>
+            <span class="link-block">
+              <a href="https://huggingface.co/Zhuoling98/GEM/tree/main"
+                  class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Model</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p  style="font-size: 20px;">
+            &nbsp;&nbsp;&nbsp;&nbsp; Realizing generalizable dynamic object manipulation is important for enhancing manufacturing efficiency, 
+            as it eliminates the need of specialized engineering for different scenarios. To this end, imitation learning emerges as a 
+            promising paradigm, leveraging expert demonstrations to teach a policy about manipulation skills. Although the generalization 
+            of an imitation learning policy can be improved by increasing demonstrations, demonstration collection is labor-intensive. To 
+            address this problem, this paper explores whether strong generalization in dynamic object manipulation can be achieved with only 
+            a few demonstrations. Specifically, we develop an entropy-based theoretical framework to quantify the imitation learning data 
+            requirement. Based on the insights derived from this theoretical framework, we propose a manipulation system named Generalizable 
+            Entropy Machine (GEM). The extensive experiments demonstrate that GEM can generalize across diverse environment backgrounds, robot 
+            embodiments, motion dynamics, and object geometries. Notably, GEM has been deployed in a real canteen for tableware collection. 
+            Without any in-scene demonstration, it achieves over 97% success across more than 10,000 operations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section"  style="margin-top: 0; padding-top: 30px;">
+  <div style="background-color: #f5f5f5;">
+    <div class="container is-controllable">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" style="text-align: center;">The First Dynamic Object Manipulation Simulator</h2>
+          <div class="content has-text-justified">
+            <p  style="font-size: 20px;">
+              &nbsp;&nbsp;&nbsp;&nbsp; We build the first dynamic object manipulation simulator. Based on this simulator, we generate thousands
+              of manipulation demonstrations efficiently with only a little manual effort. Thanks to the smart design of GEM, our algorithm can naturally
+              generalize to unseen motion dynamics of manipuated objects. Therefore, during demonstration collection, we only manipulate 
+              static objects, which greatly reduces the teleoperation challenge. This video shows a few our collected
+              demonstration samples. Notably, the original video resolution is only 640x480. For easier viewing, we enlarged it to 1080p. This 
+              enlargement results in some noise in this video.
+            <p>
+          </div>
+          <div class="center" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0;" 
+                    src="https://www.youtube.com/embed/_OtGH4nOCLw" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section"  style="margin-top: 0; padding-top: 30px;">
+  <div class="container is-controllable">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="text-align: center;">Manipulation Generalization in Simulator</h2>
+        <div class="content has-text-justified">
+          <p  style="font-size: 20px;">
+            &nbsp;&nbsp;&nbsp;&nbsp; Th developed dynamic manipulation simulator greatly facilitates algorithm development. GEM successfully
+            generalizes across different objects, robot embodiments, and motion dynamics successfully. For example, in this video, GEM controls 
+            a UR10e robot hand to manipulate objects in diverse geometries and the success rate is 100%, although all training demonstrations are
+            collected based on a Franka Panda robot. The robot embodiment, manipulated objects, and moving speeds of objects are unseen in the 
+            policy training dataset.
+          <p>
+        </div>
+        <div class="center" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+          <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0;" 
+                  src="https://www.youtube.com/embed/3Kgdb4kUhHw" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section"  style="margin-top: 0; padding-top: 30px;">
+  <div style="background-color: #f5f5f5;">
+    <div class="container is-controllable">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" style="text-align: center;">Sim-to-Real Generalization without Tuning</h2>
+          <div class="content has-text-justified">
+            <p  style="font-size: 20px;">
+              &nbsp;&nbsp;&nbsp;&nbsp; Remarkably, GEM trained using only simulated demonstrations can generalize to real-world dynamic 
+              object manipulation without real-world tuning data. This video shows that GEM can pick unseen objects in the real world, even 
+              though the environment background, robot embodiment, and motion dynamics are all unseen.
+            <p>
+          </div>
+          <div class="center" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0;" 
+                    src="https://www.youtube.com/embed/3EorEFIW6vc" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section"  style="margin-top: 0; padding-top: 30px;">
+  <div class="container is-controllable">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="text-align: center;">Sim-to-Real Precise Manipulation</h2>
+        <div class="content has-text-justified">
+          <p  style="font-size: 20px;">
+            &nbsp;&nbsp;&nbsp;&nbsp; Thanks to the strong generalization of GEM, it can even perform very precise manipulation tasks. 
+            In this video, without using real-world tuning data, GEM inserts a block into a moving container, which only allows two 
+            millimeters of position error.
+          <p>
+        </div>
+        <div class="center" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+          <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0;" 
+                  src="https://www.youtube.com/embed/E4WFxBSLMq0" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section"  style="margin-top: 0; padding-top: 30px;">
+  <div style="background-color: #f5f5f5;">
+    <div class="container is-controllable">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" style="text-align: center;">Strong Promise in Applications</h2>
+          <div class="content has-text-justified">
+            <p  style="font-size: 20px;">
+              &nbsp;&nbsp;&nbsp;&nbsp; If we further tune the policy with a few real-world demonstrations, GEM can achieve a nearly 100% success rate in 
+              real scenarios, even though the novel scenarios are unseen (e.g., collect tuning data in a lab environment and deploy the policy in another
+              environment).
+            <p>
+          </div>
+          <div class="center" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0;" 
+                    src="https://www.youtube.com/embed/rjbYXj-lyNI" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div style="background-color: #ffffff;">
+    <div class="container is-controllable">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" style="text-align: center;">My RedNote (小红书) QR Code</h2>
+          <div class="content has-text-justified">
+            <p  style="font-size: 20px;">
+              &nbsp;&nbsp;&nbsp;&nbsp; Welcome to follow my RedNote. I will share my latest research progress and insights not included in papers on RedNote.
+              Contact me for collaboration is also welcomed!
+            </p>
+          </div>
+
+          <div class="image-area" style="text-align: center;">
+            <img src="./static/images/Rednote_QR_Code.png" alt="pipeline" width="30%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- To Do: Replace the arxiv paper description. -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{li2025gem,
+      title={Train Once, Deploy Anywhere: Realizing Data-Efficient Dynamic Object Manipulation},
+      author={Zhuoling, Li and Xiaoyang, Wu and Zhenhua, Xu and Hengshuang, Zhao},
+      journal={arXiv preprint arXiv:xxxx.xxxxx},
+      year={2025}
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="content">
+        <p>
+          The template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
