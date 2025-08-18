@@ -1,15 +1,15 @@
-# LARM
+# GEM
 
 This is the repository that contains source code for the webpage of VIRT.
 
 If you find VIRT useful for your work please cite:
 ```
-@article{li2024virt,
-      title={VIRT: Vision Instructed Transformer for Robotic Manipulation},
-      author={Zhuoling, Li and Liangliang, Ren and Jinrong, Yang and Yong, Zhao and others},
+@article{li2025gem,
+      title={Train Once, Deploy Anywhere: Realizing Data-Efficient Dynamic Object Manipulation},
+      author={Zhuoling, Li and Xiaoyang, Wu and Zhenhua, Xu and Hengshuang, Zhao},
       journal={arXiv preprint arXiv:xxxx.xxxxx},
-      year={2024}
-    }
+      year={2025}
+}
 ```
 
 # Website License
